@@ -1,0 +1,16 @@
+﻿@using Microsoft.Extensions.Options;
+
+@inject IOptionsSnapshot<OptionsBindSample.Class> myclass;
+
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<h4>ClassNo:@Model.ClassNo</h4>
+<h4>@Model.ClassDesc</h4>
+<h4>@myclass.Value.ClassDesc</h4>
+<h4>@myclass.Value.Students.FirstOrDefault().Name</h4>
