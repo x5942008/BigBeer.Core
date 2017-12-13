@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Enu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Json", "BigBeer.Core.Extensions.Json\BigBeer.Core.Extensions.Json.csproj", "{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.String", "BigBeer.Core.Extensions.String\BigBeer.Core.Extensions.String.csproj", "{508BD4B0-4974-43ED-9912-1C4390B6D36D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,13 +79,19 @@ Global
 		{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508BD4B0-4974-43ED-9912-1C4390B6D36D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508BD4B0-4974-43ED-9912-1C4390B6D36D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508BD4B0-4974-43ED-9912-1C4390B6D36D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508BD4B0-4974-43ED-9912-1C4390B6D36D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{24414941-D637-48C5-943B-3D945EB57F7B} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{AC31745F-D24B-459B-8EBC-3D150C77AA16} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401} = {601B7607-8582-4122-823A-8FE5CA52DB90}
+		{508BD4B0-4974-43ED-9912-1C4390B6D36D} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
