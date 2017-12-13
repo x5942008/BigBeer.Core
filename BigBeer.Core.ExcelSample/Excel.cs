@@ -31,7 +31,7 @@ namespace BigBeer.Core.Excel
     public class Excel
     {
         /// <summary>
-        /// 只针对2003以上版本
+        /// 只针对2003以上版本Excel
         /// </summary>
         /// <param name="data">需要存储的数据</param>
         /// <param name="path">存储地址</param>
