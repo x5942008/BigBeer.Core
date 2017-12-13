@@ -23,17 +23,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.RedisSample", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{601B7607-8582-4122-823A-8FE5CA52DB90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Enum", "BigBeer.Core.Extensions.Enum\BigBeer.Core.Extensions.Enum.csproj", "{AC31745F-D24B-459B-8EBC-3D150C77AA16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Enum", "BigBeer.Core.Extensions.Enum\BigBeer.Core.Extensions.Enum.csproj", "{AC31745F-D24B-459B-8EBC-3D150C77AA16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Json", "BigBeer.Core.Extensions.Json\BigBeer.Core.Extensions.Json.csproj", "{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Json", "BigBeer.Core.Extensions.Json\BigBeer.Core.Extensions.Json.csproj", "{9F46BA3A-66E4-4B15-BBAC-A8FEA9C2C401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.String", "BigBeer.Core.Extensions.String\BigBeer.Core.Extensions.String.csproj", "{508BD4B0-4974-43ED-9912-1C4390B6D36D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.String", "BigBeer.Core.Extensions.String\BigBeer.Core.Extensions.String.csproj", "{508BD4B0-4974-43ED-9912-1C4390B6D36D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.ITQueryable", "BigBeer.Core.Extensions.ITQueryable\BigBeer.Core.Extensions.ITQueryable.csproj", "{39223E74-A47A-4823-A927-1CB0AC3864F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.ITQueryable", "BigBeer.Core.Extensions.ITQueryable\BigBeer.Core.Extensions.ITQueryable.csproj", "{39223E74-A47A-4823-A927-1CB0AC3864F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tool", "Tool", "{B9334B19-A9CF-4B81-8DE7-71FD364AD989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.TCollection", "BigBeer.Core.Extensions.TCollection\BigBeer.Core.Extensions.TCollection.csproj", "{0A1B1625-EE1F-423C-A766-141C352F1696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.TCollection", "BigBeer.Core.Extensions.TCollection\BigBeer.Core.Extensions.TCollection.csproj", "{0A1B1625-EE1F-423C-A766-141C352F1696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Array", "BigBeer.Core.Extensions.Array\BigBeer.Core.Extensions.Array.csproj", "{4150A02D-2696-46B2-82F5-6C6217511658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Decimal", "BigBeer.Core.Extensions.Decimal\BigBeer.Core.Extensions.Decimal.csproj", "{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.DateTime", "BigBeer.Core.Extensions.DateTime\BigBeer.Core.Extensions.DateTime.csproj", "{8422236F-90D3-40F3-A023-AC2997BBB4F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +103,18 @@ Global
 		{0A1B1625-EE1F-423C-A766-141C352F1696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A1B1625-EE1F-423C-A766-141C352F1696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A1B1625-EE1F-423C-A766-141C352F1696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4150A02D-2696-46B2-82F5-6C6217511658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4150A02D-2696-46B2-82F5-6C6217511658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4150A02D-2696-46B2-82F5-6C6217511658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4150A02D-2696-46B2-82F5-6C6217511658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +128,9 @@ Global
 		{508BD4B0-4974-43ED-9912-1C4390B6D36D} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{39223E74-A47A-4823-A927-1CB0AC3864F5} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{0A1B1625-EE1F-423C-A766-141C352F1696} = {601B7607-8582-4122-823A-8FE5CA52DB90}
+		{4150A02D-2696-46B2-82F5-6C6217511658} = {601B7607-8582-4122-823A-8FE5CA52DB90}
+		{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C} = {601B7607-8582-4122-823A-8FE5CA52DB90}
+		{8422236F-90D3-40F3-A023-AC2997BBB4F7} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
