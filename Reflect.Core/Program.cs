@@ -3,19 +3,34 @@ using System.Reflection;
 using RSA.Security;
 using BigBeer.Core.RedisSample;
 using System.Threading;
+using BigBeer.Core.Extensions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Reflect.Core
 {
+    public enum a {
+        /// <summary>
+        /// a
+        /// </summary>
+        [Display(Name ="a")]
+        A,
+        B,
+        c,
+        d,
+        e
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            var redis = new RedisHelp("10.0.0.5:999");
-            var a = redis.StringSet("2332", "No-Sql redis速度很快");
-            Console.WriteLine(a);
-            var b = redis.StringGet("2332");
-            Console.WriteLine(b);
+            Console.WriteLine( a.A.EnumCount());
             Console.ReadLine();
+            //var redis = new RedisHelp("10.0.0.5:999");
+            //var a = redis.StringSet("2332", "No-Sql redis速度很快");
+            //Console.WriteLine(a);
+            //var b = redis.StringGet("2332");
+            //Console.WriteLine(b);
+            //Console.ReadLine();
             //Type t = typeof(RefClass);
             ////BindingFlags.NonPublic | BindingFlags.Instance |
             ////    BindingFlags.Public | BindingFlags.DeclaredOnly | BindingFlags.Static

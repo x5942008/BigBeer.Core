@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Core2_0", "Service.Core2_0\Service.Core2_0.csproj", "{8EDF585E-B0A7-45D3-8A70-47F16C5B1AA2}"
 EndProject
@@ -19,7 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSA.Security", "RSA.Securit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.ExcelSample", "BigBeer.Core.ExcelSample\BigBeer.Core.ExcelSample.csproj", "{40E37D7B-982F-4803-8D6B-F081A81B4332}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.RedisSample", "BigBeer.Core.RedisSample\BigBeer.Core.RedisSample.csproj", "{F2E4DBCE-DBCE-41CF-9A43-DAB1CD1BB7C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.RedisSample", "BigBeer.Core.RedisSample\BigBeer.Core.RedisSample.csproj", "{F2E4DBCE-DBCE-41CF-9A43-DAB1CD1BB7C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{601B7607-8582-4122-823A-8FE5CA52DB90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Enum", "BigBeer.Core.Extensions.Enum\BigBeer.Core.Extensions.Enum.csproj", "{AC31745F-D24B-459B-8EBC-3D150C77AA16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,9 +67,16 @@ Global
 		{F2E4DBCE-DBCE-41CF-9A43-DAB1CD1BB7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E4DBCE-DBCE-41CF-9A43-DAB1CD1BB7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E4DBCE-DBCE-41CF-9A43-DAB1CD1BB7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC31745F-D24B-459B-8EBC-3D150C77AA16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC31745F-D24B-459B-8EBC-3D150C77AA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC31745F-D24B-459B-8EBC-3D150C77AA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC31745F-D24B-459B-8EBC-3D150C77AA16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC31745F-D24B-459B-8EBC-3D150C77AA16} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}

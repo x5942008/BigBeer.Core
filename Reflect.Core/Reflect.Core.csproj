@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BigBeer.Core.Extensions.Enum\BigBeer.Core.Extensions.Enum.csproj" />
     <ProjectReference Include="..\BigBeer.Core.RedisSample\BigBeer.Core.RedisSample.csproj" />
     <ProjectReference Include="..\RSA.Security\RSA.Security.csproj" />
   </ItemGroup>
