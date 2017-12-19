@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Core2_0", "Service.Core2_0\Service.Core2_0.csproj", "{8EDF585E-B0A7-45D3-8A70-47F16C5B1AA2}"
 EndProject
@@ -35,11 +35,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tool", "Tool", "{B9334B19-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.TCollection", "BigBeer.Core.Extensions.TCollection\BigBeer.Core.Extensions.TCollection.csproj", "{0A1B1625-EE1F-423C-A766-141C352F1696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Array", "BigBeer.Core.Extensions.Array\BigBeer.Core.Extensions.Array.csproj", "{4150A02D-2696-46B2-82F5-6C6217511658}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Array", "BigBeer.Core.Extensions.Array\BigBeer.Core.Extensions.Array.csproj", "{4150A02D-2696-46B2-82F5-6C6217511658}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Decimal", "BigBeer.Core.Extensions.Decimal\BigBeer.Core.Extensions.Decimal.csproj", "{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Decimal", "BigBeer.Core.Extensions.Decimal\BigBeer.Core.Extensions.Decimal.csproj", "{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.DateTime", "BigBeer.Core.Extensions.DateTime\BigBeer.Core.Extensions.DateTime.csproj", "{8422236F-90D3-40F3-A023-AC2997BBB4F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.DateTime", "BigBeer.Core.Extensions.DateTime\BigBeer.Core.Extensions.DateTime.csproj", "{8422236F-90D3-40F3-A023-AC2997BBB4F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pay", "Pay", "{CD615473-99BA-4420-AF72-BB3845A98C9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.PaySample", "BigBeer.Core.PaySample\BigBeer.Core.PaySample.csproj", "{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.PayNotifys", "BigBeer.Core.PayNotifys\BigBeer.Core.PayNotifys.csproj", "{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +121,14 @@ Global
 		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8422236F-90D3-40F3-A023-AC2997BBB4F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +145,8 @@ Global
 		{4150A02D-2696-46B2-82F5-6C6217511658} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{670D0FF6-3DF8-4BE3-9817-D54EB43FA73C} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{8422236F-90D3-40F3-A023-AC2997BBB4F7} = {601B7607-8582-4122-823A-8FE5CA52DB90}
+		{C6AADA6E-0F5F-4649-B794-921DFF57A2AD} = {CD615473-99BA-4420-AF72-BB3845A98C9C}
+		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A} = {CD615473-99BA-4420-AF72-BB3845A98C9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
