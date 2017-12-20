@@ -11,15 +11,15 @@ namespace BigBeer.Core.PayNotifys.Controllers
     {
         //在此处注入需要使用的数据库
 
-            /// <summary>
+        /// <summary>
             /// 写日志文件
             /// </summary>
             /// <param name="content"></param>
-        public void OnMessage(string content)
+        public async Task Log(string content)
         {
             try
             {
-                FileStream fs = new FileStream(@"G:\wxpaymessage.txt", FileMode.Append);
+                FileStream fs = new FileStream(StaticKey.LogPath, FileMode.Append);
                 StreamWriter w = new StreamWriter(fs);
                 w.WriteLine($"{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")}{content}");
                 w.Flush();
@@ -28,7 +28,6 @@ namespace BigBeer.Core.PayNotifys.Controllers
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

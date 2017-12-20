@@ -43,9 +43,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Dat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pay", "Pay", "{CD615473-99BA-4420-AF72-BB3845A98C9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.PaySample", "BigBeer.Core.PaySample\BigBeer.Core.PaySample.csproj", "{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.PaySample", "BigBeer.Core.PaySample\BigBeer.Core.PaySample.csproj", "{C6AADA6E-0F5F-4649-B794-921DFF57A2AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.PayNotifys", "BigBeer.Core.PayNotifys\BigBeer.Core.PayNotifys.csproj", "{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.PayNotifys", "BigBeer.Core.PayNotifys\BigBeer.Core.PayNotifys.csproj", "{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wechat", "Wechat", "{C0F84A56-AF09-4500-B9B4-575B12132CFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.WeChatSample", "BigBeer.Core.WeChatSample\BigBeer.Core.WeChatSample.csproj", "{0AFE917C-25B6-4E47-98BA-35879B0E544D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +133,10 @@ Global
 		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AFE917C-25B6-4E47-98BA-35879B0E544D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AFE917C-25B6-4E47-98BA-35879B0E544D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AFE917C-25B6-4E47-98BA-35879B0E544D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AFE917C-25B6-4E47-98BA-35879B0E544D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +155,7 @@ Global
 		{8422236F-90D3-40F3-A023-AC2997BBB4F7} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{C6AADA6E-0F5F-4649-B794-921DFF57A2AD} = {CD615473-99BA-4420-AF72-BB3845A98C9C}
 		{41DE42B6-AE01-4AB5-85C9-3D9556F1790A} = {CD615473-99BA-4420-AF72-BB3845A98C9C}
+		{0AFE917C-25B6-4E47-98BA-35879B0E544D} = {C0F84A56-AF09-4500-B9B4-575B12132CFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
