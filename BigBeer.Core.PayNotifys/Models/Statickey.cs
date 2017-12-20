@@ -23,6 +23,16 @@ namespace BigBeer.Core.PayNotifys
             }
         }
         /// <summary>
+        /// 获取Json文件的扩展
+        /// </summary>
+        public static IConfiguration Configuration {
+            get
+            {
+                return ConfigRoot;
+            }
+        }
+
+        /// <summary>
         /// 日志保存路劲
         /// </summary>
         public static string LogPath

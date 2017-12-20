@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using BigBeer.Core.PaySample;
+using BigBeer.Core.PaySample.LogicDispose;
+using Microsoft.AspNetCore.Http;
 
 namespace BigBeer.Core.PayNotifys.Controllers
 {
@@ -19,6 +22,13 @@ namespace BigBeer.Core.PayNotifys.Controllers
         /// </summary>
         public class AlipayController : BaseController
         {
+        IPay PayServer;
+        IPayResult payResult;
+        public AlipayController(PayServer payServer,PayResult payResult)
+        {
+            PayServer = payServer;
+            this.payResult = payResult;
+        }
             /// <summary>
             /// 支付宝公钥
             /// </summary>
@@ -83,7 +93,7 @@ namespace BigBeer.Core.PayNotifys.Controllers
         /// </summary>
         /// <returns></returns>
         [AllowAnonymous]
-        public async Task<ContentResult> Alinotify()
+        public async Task<ContentResult> AlipayNotify()
         {
             Console.WriteLine("->alipay notify functions inside !");
             var formsString = new System.IO.StreamReader(Request.Body).ReadToEnd();
@@ -108,11 +118,11 @@ namespace BigBeer.Core.PayNotifys.Controllers
 
             var param = $"aliStatus:{aliStatus},aliMoney:{aliMoney}";
             Console.WriteLine($"->alipay parameters : {param}");
-            await Log($"no:{orderid}");
-            await Log(aliMoney.ToString());
-            await Log(aliStatus);
-            await Log($"paytime:{parameters["gmt_payment"]}");
-            await Log($"buyer:{parameters["buyer_logon_id"]}");
+            await log($"no:{orderid}");
+            await log(aliMoney.ToString());
+            await log(aliStatus);
+            await log($"paytime:{parameters["gmt_payment"]}");
+            await log($"buyer:{parameters["buyer_logon_id"]}");
             //var order = Db.CapitalRecords.Include(t => t.Member)
             //    .FirstOrDefault(t => t.No == orderid);
             //if (order.Status == PayStatus.Success)
@@ -143,36 +153,35 @@ namespace BigBeer.Core.PayNotifys.Controllers
             //}
             try
             {
-                await Db.SaveChangesAsync();
+                //await Db.SaveChangesAsync();
                 Console.WriteLine($"-> begin pay ...");
-                var result = await payService.Payorder(orderid);
+                var result = await PayServer.OrderPayAsync(orderid);
                 Console.WriteLine($"->alipay paystatus : {result.Status.ToString()}");
-                log(result.Status.ToString());
-                if (result.Status == PayResultStatus.Sucess)
+                await Log(result.Status.ToString());
+                if (result.Status == payResult.Status)
                 {
-                    var mid = order.Member.MapId(Db);
-                    Action action = async () => {
-                        try
-                        {
-                            await QueuePlugProvider.Create(Queue.Message)
-                        .SendAsync(new
-                        {
-                            title = result.NotifyData.Name,
-                            content = result.NotifyData.Message,
-                            type = (int)result.NotifyData.Type,
-                            sender = "系统",
-                            user = mid
-                        });
-                            await log("消息发送成功");
-                        }
-                        catch (Exception ex)
-                        {
-                            await log($"消息发送失败 ex :{ex.Message}");
-                        }
-
+                    //var mid = order.Member.MapId(Db);
+                    Action action = async () =>
+                    {
+                        //try
+                        //{
+                        //    await QueuePlugProvider.Create(Queue.Message)
+                        //.SendAsync(new
+                        //{
+                        //    title = result.NotifyData.Name,
+                        //    content = result.NotifyData.Message,
+                        //    type = (int)result.NotifyData.Type,
+                        //    sender = "系统",
+                        //    user = mid
+                        //});
+                        await Log("消息发送成功");
                     };
+                        //catch (Exception ex)
+                        //{
+                        //    await Log($"消息发送失败 ex :{ex.Message}");
+                        //}
                     await Task.Run(action);
-                    await payService.Activity(HttpContext, Db, order.No);
+                    //await PayServer .Activity(HttpContext, Db, order.No);   如果有活动进行处理 增加扩展处理 在底部
                     return Content("success", "text/plane");
                 }
                 else
@@ -186,6 +195,99 @@ namespace BigBeer.Core.PayNotifys.Controllers
                 return Content("error", "text/plane");
             }
         }
-
     }
+    #region 活动处理扩展 上方的示范例子
+    /// <summary>
+    /// 扩展类
+    /// </summary>
+    public static partial class Extensions
+    {
+        /// <summary>
+        /// 计算活动
+        /// 续期1个月送6000两银两
+        /// </summary>
+        /// <param name="renew"></param>
+        /// <param name="httpContent"></param>
+        /// <param name="db"></param>
+        /// <param name="orderNo">订单ID</param>
+        /// <returns></returns>
+        public static Task Activity(this IPay payment, HttpContext httpContext/*，CusumerDb Db*/, string orderNo)
+        {
+            //    //结束时间
+            //    var endDate = new DateTime(2018, 1, 1);
+            //    //活动结束
+            //    if (endDate < DateTime.Now) return Task.CompletedTask;
+            //    //活动主体为续期
+
+            //    var order = Db.CapitalRecords.Include(t => t.Member).First(t => t.No == orderNo);
+            //    if (order == null)
+            //        return httpContext.Log($"订单不存在:{orderNo}", "IPay/Activity");
+            //    if (order.Status != Cusumer.Lib.Enums.PayStatus.Success)
+            //        return httpContext.Log($"订单状态不成功:{orderNo}", "IPay/Activity");
+            //    //针对续期进行活动
+            //    if (order.Type != CapitalRecordType.Renew)
+            //    {
+            //        return httpContext.Log($"该订单不存在活动:{order.Type.ToString()}", "IPay/Activity");
+            //    }
+            //    //续期1个月送6000两银子
+            //    var money = 6000M * order.Number;
+
+            //    var bag = Db.MoneyBags.Include(t => t.Member)
+            //        .Where(t => t.Type == MoneyBagType.Gold)
+            //        .Where(t => t.Member.ID == order.Member.ID)
+            //        .First();
+            //    //更新余额
+            //    Db.MoneyBags.Where(t => t.ID == bag.ID).Update(t => new MoneyBag() { Money = t.Money + money });
+            //    try
+            //    {
+            //        Db.SaveChanges();
+            //        //系统消息
+            //        Message message = new Message()
+            //        {
+            //            Content = $"恭喜参与首期续期送银两活动获得银两[{money}]两,银两可以参与[升官发财]提升官阶享受俸禄哦,恭喜大人,贺喜大人!",
+            //            Member = order.Member,
+            //            Sender = "系统消息",
+            //            Type = MessageType.Sys,
+            //            Title = "奖励通知"
+            //        };
+            //        Db.Messages.Add(message);
+            //        //账单
+            //        Db.CapitalRecords.Add(new CapitalRecord()
+            //        {
+            //            Content = message.Content,
+            //            Member = order.Member,
+            //            Method = PayMethod.Sys,
+            //            Money = money,
+            //            Number = 1,
+            //            Status = PayStatus.Success,
+            //            PayTime = DateTime.Now,
+            //            Title = "活动奖励",
+            //            Type = CapitalRecordType.SilverWage
+            //        });
+
+            //        Db.SaveChanges();
+            //        var mid = order.Member.MapId(Db);
+            //        httpContext.SendMessage(Queue.VerifyCode, new
+            //        {
+            //            phone = order.Member.Phone,
+            //            message = message.Content
+            //        }).GetAwaiter().GetResult();
+            //        return httpContext.SendMessage(Queue.Message, new
+            //        {
+            //            title = "活动奖励",
+            //            content = message.Content,
+            //            type = (int)MessageType.Sys,
+            //            sender = "系统",
+            //            user = mid
+            //        });
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        return httpContext.Log($"活动计算错误:{ex.Message}", "IPay/Activity");
+            //    }
+            //}
+            return Task.CompletedTask; //多加的 防止报错
+    }
+}
+    #endregion
 }

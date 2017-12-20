@@ -12,9 +12,9 @@ namespace BigBeer.Core.PayNotifys.Controllers
         //在此处注入需要使用的数据库
 
         /// <summary>
-            /// 写日志文件
-            /// </summary>
-            /// <param name="content"></param>
+        /// 写日志文件
+        /// </summary>
+        /// <param name="content"></param>
         public async Task Log(string content)
         {
             try
@@ -30,6 +30,34 @@ namespace BigBeer.Core.PayNotifys.Controllers
             {
                 throw;
             }
+        }
+        /// <summary>
+        ///主要记录回调处理日志
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        protected Task log(string msg)
+        {
+            var path = $@"{ Directory.GetCurrentDirectory()}\log\{DateTime.Now.ToString("yyMMdd")}.txt";
+            try
+            {
+                using (var stream = new FileStream(path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
+                {
+                    using (var writer = new StreamWriter(stream))
+                    {
+                        writer.WriteLine(msg);
+                        writer.Flush();
+                        writer.Close();
+                    }
+                    stream.Flush();
+                    stream.Close();
+                }
+            }
+            catch
+            {
+
+            }
+            return Task.CompletedTask;
         }
     }
 }

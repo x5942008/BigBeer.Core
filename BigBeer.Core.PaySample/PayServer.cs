@@ -20,19 +20,19 @@ namespace BigBeer.Core.PaySample
             return OrderPayAsync(OrderNo).Result;
         }
 
-        public Task<IPayResult> OrderPayAsync(string OrderNo)
+        public async Task<IPayResult> OrderPayAsync(string OrderNo)
         {
             //var order = Db.CapitalRecords.FirstOrDefault(t => t.No == orderNo);
             //await Db.Entry(order).ReloadAsync();
-            if (order == null || order.Status != PayStatus.Success)
-                throw new ArgumentNullException("orderno");
-            if (!PaymentOptions.Subjects.ContainsKey(order.Type))
-                throw new NullReferenceException("has no pay subject");
-            var paymenttype = PaymentOptions.Subjects[order.Type];
-            IPay payment = (IPay)Activator.CreateInstance(paymenttype, Db);
+            //if (order == null || order.Status != PayStatus.Success)
+            //    throw new ArgumentNullException("orderno");
+            //if (!PaymentOptions.Subjects.ContainsKey(order.Type))
+            //    throw new NullReferenceException("has no pay subject");
+            var paymenttype = PayOptions.Options["order.Type"];
+            IPay payment = (IPay)Activator.CreateInstance(paymenttype/*,Db*/);
             if (payment == null)
                 throw new NullReferenceException("payment is null");
-            return await payment.PayOrderAsync(orderNo);
+            return await payment.OrderPayAsync(OrderNo);
         }
     }
 }
