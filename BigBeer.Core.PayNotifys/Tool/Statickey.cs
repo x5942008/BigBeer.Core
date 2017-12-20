@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace BigBeer.Core.PayNotifys
 {
+    /// <summary>
+    /// 还未在Json文件配置任何键值
+    /// 获取的数据为空
+    /// </summary>
     public static class StaticKey
     {
         private static IConfigurationRoot ConfigRoot { get; set; }
