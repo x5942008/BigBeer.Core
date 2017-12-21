@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Core2_0", "Service.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeerMiddelwareSample", "BigBeerMiddelware\BigBeerMiddelwareSample.csproj", "{25CB1F74-69C9-4DF2-BEA6-1282EF8F0B29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflect.Core", "Reflect.Core\Reflect.Core.csproj", "{46001647-C65C-4E31-8FD5-5A7D76B6C20F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Core", "Reflect.Core\Test.Core.csproj", "{46001647-C65C-4E31-8FD5-5A7D76B6C20F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommanLineSample", "CommanLineSample\CommanLineSample.csproj", "{DFA89ED0-9D7B-43CC-A34F-39AF727A7A7D}"
 EndProject
@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.PayNotifys", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wechat", "Wechat", "{C0F84A56-AF09-4500-B9B4-575B12132CFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.WeChatSample", "BigBeer.Core.WeChatSample\BigBeer.Core.WeChatSample.csproj", "{0AFE917C-25B6-4E47-98BA-35879B0E544D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.WeChatSample", "BigBeer.Core.WeChatSample\BigBeer.Core.WeChatSample.csproj", "{0AFE917C-25B6-4E47-98BA-35879B0E544D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
