@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc;
 using BigBeer.Core.PaySample;
+using Microsoft.AspNetCore.Http;
 
 namespace BigBeer.Core.PayNotifys.Controllers
 {
@@ -35,9 +36,8 @@ namespace BigBeer.Core.PayNotifys.Controllers
             {
                 //OnMessage("开始处理请求");
                 string returnSign = "";//微信返回签名
-                //TODO...Core还没找到替代的方法
                 //var stream = Request.InputStream; 
-                Stream temp =null;//预防报错 临时多加的变量
+                Stream temp = Request.Body;//代替上一个变量
                 StreamReader reader = new StreamReader(temp/*stream*/);
                 var str = reader.ReadToEnd();
                 XmlDocument document = new XmlDocument();
@@ -70,6 +70,10 @@ namespace BigBeer.Core.PayNotifys.Controllers
                         decimal money;
                         var payMoney = decimal.Parse(sort["total_fee"]) / 100;
                         string userid;
+                        #region 返回页面的响应方法 
+                        await Response.WriteAsync(xml);
+                        //Response.end();//TODO 找不到core中对应的方法
+                        #endregion
                         //Member user;
                         //using (var db = FinanceDb.Default)
                         //{
