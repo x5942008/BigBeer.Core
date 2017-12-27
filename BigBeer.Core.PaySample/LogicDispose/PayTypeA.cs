@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace BigBeer.Core.PaySample.LogicDispose
 {
     /// <summary>
-    /// A类型支付
+    /// A类型支付具体实现
     /// </summary>
     public class PayTypeA : PayBase
     {
@@ -22,9 +22,10 @@ namespace BigBeer.Core.PaySample.LogicDispose
         public async override Task<IPayResult> OrderPayAsync(string OrderNo)
         {
             //操作逻辑
-            return  new PayResult(){
-                 Status= PayResultStatus.Sucess,
-                NotifyData = ("name","message","Url","OrderNo","PayType","paymethod")
+            return new PayResult()
+            {
+                Status = PayResultStatus.Sucess,
+                NotifyData = ("name", "message", "Url", "OrderNo", "PayType", "paymethod")
             };
         }
     }

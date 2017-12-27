@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace BigBeer.Core.PaySample.LogicDispose
 {
     /// <summary>
-    /// B类型支付
+    /// B类型支付具体实现
     /// </summary>
     public class PayTypeB : PayBase
     {

@@ -75,6 +75,7 @@ namespace BigBeer.Core.Extensions
         }
         #endregion
         private static byte[] EncryptKeys = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F };
+
         /// <summary>
         /// AES加密
         /// </summary>
@@ -101,6 +102,7 @@ namespace BigBeer.Core.Extensions
                 return ex.Message + @this;
             }
         }
+
         /// <summary>
         /// AES解密
         /// </summary>
@@ -128,6 +130,7 @@ namespace BigBeer.Core.Extensions
                 return ex.Message + @this;
             }
         }
+
         /// <summary>
         /// 进行sha刷法
         /// </summary>
@@ -142,6 +145,7 @@ namespace BigBeer.Core.Extensions
             byte[] bytes = sha.GetHashAndReset();
             return Convert.ToBase64String(bytes);
         }
+
         /// <summary>
         /// MD5加密
         /// </summary>
@@ -160,6 +164,7 @@ namespace BigBeer.Core.Extensions
             }
             return ret.PadLeft(32, '0');
         }
+
         /// <summary>
         /// 加密密码
         /// </summary>
@@ -170,6 +175,7 @@ namespace BigBeer.Core.Extensions
             var key = @"wujixiong1314520";
             return @this.EncodeBase64().AESEncrypt(key);
         }
+
         /// <summary>
         /// 读取base64字符串
         /// </summary>
@@ -179,6 +185,7 @@ namespace BigBeer.Core.Extensions
         {
             return Encoding.UTF8.GetString(Convert.FromBase64String(@this));
         }
+
         /// <summary>
         /// 转换为base64
         /// </summary>
@@ -200,6 +207,7 @@ namespace BigBeer.Core.Extensions
         {
             return string.IsNullOrEmpty(@this);
         }
+
         /// <summary>
         /// 不为null
         /// </summary>
@@ -209,6 +217,7 @@ namespace BigBeer.Core.Extensions
         {
             return @this != null;
         }
+
         /// <summary>
         /// 是否为null
         /// </summary>
@@ -218,6 +227,7 @@ namespace BigBeer.Core.Extensions
         {
             return @this == null;
         }
+
         /// <summary>
         /// 指示指定的字符串是 null、空还是仅由空白字符组成。
         /// </summary>
@@ -227,6 +237,7 @@ namespace BigBeer.Core.Extensions
         {
             return string.IsNullOrWhiteSpace(@this);
         }
+
         /// <summary>
         /// 如果为空则设置默认值
         /// </summary>
@@ -237,6 +248,7 @@ namespace BigBeer.Core.Extensions
         {
             return (value.IsNotEmpty() ? value : defaultValue);
         }
+
         /// <summary>
         /// 是否是字母
         /// </summary>
@@ -246,6 +258,7 @@ namespace BigBeer.Core.Extensions
         {
             return !Regex.IsMatch(@this, "[^a-zA-Z]");
         }
+
         /// <summary>
         /// 是否字母加数字
         /// </summary>
@@ -255,6 +268,7 @@ namespace BigBeer.Core.Extensions
         {
             return !Regex.IsMatch(@this, "[^a-zA-Z0-9]");
         }
+
         /// <summary>
         /// 比较两个字符串内的字母是否一致
         /// </summary>
@@ -267,6 +281,7 @@ namespace BigBeer.Core.Extensions
                 .OrderBy(c => c)
                 .SequenceEqual(otherString.OrderBy(c => c));
         }
+
         /// <summary>
         /// 是否为空
         /// </summary>
@@ -276,6 +291,7 @@ namespace BigBeer.Core.Extensions
         {
             return @this == "";
         }
+
         /// <summary>
         /// 是否包含
         /// </summary>
@@ -297,6 +313,7 @@ namespace BigBeer.Core.Extensions
 
             return Regex.IsMatch(@this, regexPattern);
         }
+
         /// <summary>
         /// 是否不为空
         /// </summary>
@@ -306,6 +323,7 @@ namespace BigBeer.Core.Extensions
         {
             return @this != "";
         }
+
         /// <summary>
         /// 是否不为空或者null
         /// </summary>
@@ -315,6 +333,7 @@ namespace BigBeer.Core.Extensions
         {
             return !string.IsNullOrEmpty(@this);
         }
+
         /// <summary>
         /// 不是由null或者空格组成
         /// </summary>
@@ -324,6 +343,7 @@ namespace BigBeer.Core.Extensions
         {
             return !String.IsNullOrWhiteSpace(value);
         }
+
         /// <summary>
         /// 是否数字
         /// </summary>
@@ -333,6 +353,7 @@ namespace BigBeer.Core.Extensions
         {
             return !Regex.IsMatch(@this, "[^0-9]");
         }
+
         /// <summary>
         /// 是顺序倒序都一致
         /// </summary>
@@ -358,6 +379,7 @@ namespace BigBeer.Core.Extensions
             if (string.IsNullOrEmpty(sourse)) return new byte[] { };
             return UTF8Encoding.UTF8.GetBytes(sourse);
         }
+
         /// <summary>
         /// 转换为枚举
         /// </summary>
@@ -369,6 +391,7 @@ namespace BigBeer.Core.Extensions
             Type enumType = typeof(T);
             return (T)Enum.Parse(enumType, @this);
         }
+
         /// <summary>
         /// 转换为隐藏手机号
         /// </summary>
@@ -385,6 +408,7 @@ namespace BigBeer.Core.Extensions
             result.Append(string.Join("", @this.ToCharArray().Skip(7).Take(4)));
             return result.ToString();
         }
+
         /// <summary>
         /// 截取长度 , 多余用 ...
         /// </summary>

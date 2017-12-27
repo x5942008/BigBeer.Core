@@ -10,14 +10,43 @@ namespace BigBeer.Core.RedisSample
     /// <summary>
     /// No-Sql(Redis)
     /// </summary>
-    public class RedisHelp
+    public class RedisHelp:IDisposable
     {
-
         private static string redisAddress { get; set; }
+        private static ConnectionMultiplexer Redis { get; set; }
 
-        public RedisHelp(string RedisAddress)
+        /// <summary>
+        /// 获取Redis实例
+        /// </summary>
+        /// <param name="address">Redis地址</param>
+        /// <returns></returns>
+        public static RedisHelp Defalut(string address)
         {
-            redisAddress = RedisAddress;
+            var redis = new RedisHelp();
+            redisAddress = address;
+            redis.Connecting();
+            return redis;
+        }
+
+        /// <summary>
+        /// 链接
+        /// </summary>
+        /// <returns></returns>
+        public bool Connecting()
+        {
+            try
+            {
+                if (Redis != null)
+                {
+                    Redis.Dispose();
+                }
+                Redis = ConnectionMultiplexer.Connect(redisAddress);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         #region 准备动作(懒加载)
@@ -46,18 +75,16 @@ namespace BigBeer.Core.RedisSample
         {
             try
             {
-                using (var redis= ConnectionMultiplexer.Connect(redisAddress))
-                {
-                    var db = redis.GetDatabase();
+                    var db = Redis.GetDatabase();
                     var result = db.StringGet(key);
                     return result;
-                }
             }
             catch (Exception e)
             {
                 return "false:" + e.Message;
             }
         }
+
         /// <summary>
         /// redis存储动作
         /// </summary>
@@ -69,9 +96,7 @@ namespace BigBeer.Core.RedisSample
         {
             try
             {
-                using (var redis = ConnectionMultiplexer.Connect(redisAddress))
-                {
-                    var db = redis.GetDatabase();
+                    var db = Redis.GetDatabase();
                     var result = db.StringSet(key, value);
                     var date = DateTime.Now.AddMinutes(5);
                     if (time != null)
@@ -80,13 +105,31 @@ namespace BigBeer.Core.RedisSample
                     }
                     db.KeyExpire(key, date);
                     return true;
-                }
             }
             catch (Exception)
             {
                 return false;
             }
 
+        }
+
+        public void Dispose()
+        {
+            Redis.Dispose();
+            GC.Collect();
+        }
+    }
+
+    /// <summary>
+    /// 使用范例
+    /// </summary>
+    public class RedisTest
+    {
+        public void DoSomeThing()
+        {
+          var redis =  RedisHelp.Defalut("10.0.0.5:999");
+            redis.StringSet("1","2");
+            redis.StringGet("1");
         }
     }
 }

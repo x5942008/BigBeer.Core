@@ -7,19 +7,27 @@ using BigBeer.Core.Extensions;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
 
 namespace Test.Core
 {
-    /// <summary>
-    /// LINQ分组嵌套统计案例
-    /// </summary>
     class Program
     {
 
         static void Main(string[] args)
         {
-            LinqDo.GroupBy();
+            var build = new ConfigurationBuilder()
+                .AddJsonFile("config.json", false, true)
+                .Build();
+            Console.WriteLine(build["test"]);
             Console.ReadLine();
+            //var redis = RedisHelp.Defalut("10.0.0.5:999");
+            //Console.WriteLine(redis.StringSet("1", "2"));
+            //Console.WriteLine(redis.StringGet("1"));
+            //Console.Read();
+            //LinqDo.GroupBy();
+            //Console.ReadLine();
+
         }
     }
 }
