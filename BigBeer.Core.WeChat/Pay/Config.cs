@@ -10,16 +10,7 @@ namespace BigBeer.Core.WeChat.Pay
     /// </summary>
     public class Config
     {
-        public static IConfiguration Configuration { get; set; }
-
-        public Config()
-        {
-            new Config(Configuration);
-        }
-        public Config(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        private static IConfigurationRoot Configuration = new ConfigurationBuilder().AddJsonFile("config.json").Build();
 
         public string WeiAppId { get; set; } = Configuration["WeiAppId"]/* "wxe077b56c4aceeb7x"*/;
 

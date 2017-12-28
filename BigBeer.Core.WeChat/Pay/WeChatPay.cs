@@ -1,9 +1,11 @@
-﻿using BigBeer.Core.HelperSample;
+﻿using BigBeer.Core.Extensions;
+using BigBeer.Core.HelperSample;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace BigBeer.Core.WeChat.Pay
 {
@@ -13,7 +15,7 @@ public class WeChatPay
         /// 获取默认实例
         /// </summary>
         /// <returns></returns>
-        public WeChatPay GetExample()
+        public WeChatPay Default()
         {
             return new WeChatPay();
         }
@@ -23,7 +25,7 @@ public class WeChatPay
         /// </summary>
         /// <param name="config"></param>
         /// <returns></returns>
-        public WeChatPay GetExample(Config config)
+        public WeChatPay Default(Config config)
         {
             var wechatPay = new WeChatPay()
             {
@@ -61,7 +63,7 @@ public class WeChatPay
             try
             {
                 //TODO
-                var stream = HttpContext.Current.Request.InputStream;
+                var stream =  ""; /*HttpContext.Current.Request.InputStream*/;
                 StreamReader reader = new StreamReader(stream);
                 var str = reader.ReadToEnd();
                 string sginString = null;
@@ -164,7 +166,7 @@ public class WeChatPay
             {
                 {"appid",Config.WeiAppId},
                 {"mch_id",Config.WeiMachId},
-                {"notify_url",Config.NoticUrl},
+                {"notify_url",Config.NoticeUrl},
                 {"spbill_create_ip",Config.DefaultIp},
                 {"nonce_str",RandomCode(32).ToUpper()},
                 {"device_info","WEB"},
@@ -196,7 +198,7 @@ public class WeChatPay
             var str = sb.ToString().Substring(0, sb.ToString().Length - 1);
             string key = Config.WeiKey;
             var stringSignTemp = $"{str}&key={key}";
-            var result = stringSignTemp.EncrypMD5().ToUpper();
+            var result = stringSignTemp.Md5Encrypt().ToUpper();
             return result;
         }
     }
