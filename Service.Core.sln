@@ -53,9 +53,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.WeChatSample",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.HelperSample", "BigBeer.Core.HelperSample\BigBeer.Core.HelperSample.csproj", "{8127EECA-8084-42BF-A5C0-2ACE9DEF26C2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.WeChat", "BigBeer.Core.WeChat\BigBeer.Core.WeChat.csproj", "{6C9BCE98-90E6-4BF7-AAA8-52392563B882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.WeChat", "BigBeer.Core.WeChat\BigBeer.Core.WeChat.csproj", "{6C9BCE98-90E6-4BF7-AAA8-52392563B882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.CookieAuthSample", "BigBeer.Core.CookieAuthSample\BigBeer.Core.CookieAuthSample.csproj", "{5824B51E-668E-445C-9D2E-5B7F173252F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +153,10 @@ Global
 		{6C9BCE98-90E6-4BF7-AAA8-52392563B882}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C9BCE98-90E6-4BF7-AAA8-52392563B882}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C9BCE98-90E6-4BF7-AAA8-52392563B882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5824B51E-668E-445C-9D2E-5B7F173252F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5824B51E-668E-445C-9D2E-5B7F173252F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5824B51E-668E-445C-9D2E-5B7F173252F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5824B51E-668E-445C-9D2E-5B7F173252F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +178,7 @@ Global
 		{0AFE917C-25B6-4E47-98BA-35879B0E544D} = {C0F84A56-AF09-4500-B9B4-575B12132CFE}
 		{8127EECA-8084-42BF-A5C0-2ACE9DEF26C2} = {B9334B19-A9CF-4B81-8DE7-71FD364AD989}
 		{6C9BCE98-90E6-4BF7-AAA8-52392563B882} = {C0F84A56-AF09-4500-B9B4-575B12132CFE}
+		{5824B51E-668E-445C-9D2E-5B7F173252F6} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
