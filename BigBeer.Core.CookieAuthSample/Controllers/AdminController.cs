@@ -14,5 +14,14 @@ namespace BigBeer.Core.CookieAuthSample.Controllers
         {
             return View();
         }
+
+        public JsonResult Linq()
+        {
+            var a = new[] { "1", "2", "3" };
+            var b = new[] { "1","2","32", "4", "5" };
+            var result = a.Select(t => t).Except(b.Select(t => t));
+            var result2 = b.Select(t => t).Except(a.Select(t => t));
+            return Json(new { result ,result2});
+        }
     }
 }
