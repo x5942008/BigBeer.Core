@@ -59,11 +59,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.WeChat", "BigB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.CookieAuthSample", "BigBeer.Core.CookieAuthSample\BigBeer.Core.CookieAuthSample.csproj", "{5824B51E-668E-445C-9D2E-5B7F173252F6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{9CA01050-3761-429C-A3C9-67242219A3B2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service.Core", "Service.Core", "{9CA01050-3761-429C-A3C9-67242219A3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Service.Lib", "BigBeer.Core.Service.Lib\BigBeer.Core.Service.Lib.csproj", "{795B63B3-EE68-479D-89CF-91AA76B04A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Service.Lib", "BigBeer.Core.Service.Lib\BigBeer.Core.Service.Lib.csproj", "{795B63B3-EE68-479D-89CF-91AA76B04A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Service.Host", "BigBeer.Core.Service.Host\BigBeer.Core.Service.Host.csproj", "{1F44FC3D-829E-49C4-9B10-7FA8C954E7FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Service.Host", "BigBeer.Core.Service.Host\BigBeer.Core.Service.Host.csproj", "{1F44FC3D-829E-49C4-9B10-7FA8C954E7FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service.Framwork", "Service.Framwork", "{0379E7C2-8701-421F-B4AC-4DA514794079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Service.Host", "BigBeer.Framework.Service.Host\BigBeer.Framework.Service.Host.csproj", "{10682729-D8DF-4598-AA4A-CCF5B0C728D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Service.Framework", "BigBeer.Framework.Service.Framework\BigBeer.Framework.Service.Framework.csproj", "{3C507711-2DDC-4A11-8A69-4C77043032E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +177,14 @@ Global
 		{1F44FC3D-829E-49C4-9B10-7FA8C954E7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F44FC3D-829E-49C4-9B10-7FA8C954E7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F44FC3D-829E-49C4-9B10-7FA8C954E7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10682729-D8DF-4598-AA4A-CCF5B0C728D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10682729-D8DF-4598-AA4A-CCF5B0C728D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10682729-D8DF-4598-AA4A-CCF5B0C728D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10682729-D8DF-4598-AA4A-CCF5B0C728D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C507711-2DDC-4A11-8A69-4C77043032E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C507711-2DDC-4A11-8A69-4C77043032E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C507711-2DDC-4A11-8A69-4C77043032E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C507711-2DDC-4A11-8A69-4C77043032E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -195,6 +209,8 @@ Global
 		{5824B51E-668E-445C-9D2E-5B7F173252F6} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
 		{795B63B3-EE68-479D-89CF-91AA76B04A21} = {9CA01050-3761-429C-A3C9-67242219A3B2}
 		{1F44FC3D-829E-49C4-9B10-7FA8C954E7FC} = {9CA01050-3761-429C-A3C9-67242219A3B2}
+		{10682729-D8DF-4598-AA4A-CCF5B0C728D2} = {0379E7C2-8701-421F-B4AC-4DA514794079}
+		{3C507711-2DDC-4A11-8A69-4C77043032E2} = {0379E7C2-8701-421F-B4AC-4DA514794079}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}

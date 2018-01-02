@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace BigBeer.Core.Service
+namespace BigBeer.Framework.Service
 {
-   partial class Program
+    partial class Program
     {
         #region 设置居中
         private struct RECT { public int left, top, right, bottom; }
@@ -19,10 +22,10 @@ namespace BigBeer.Core.Service
             IntPtr hWin = GetConsoleWindow();
             RECT rc;
             GetWindowRect(hWin, out rc);
-            //Screen scr = Screen.FromPoint(new Point(rc.left, rc.top));
-            //int x = scr.WorkingArea.Left + (scr.WorkingArea.Width - (rc.right - rc.left)) / 2;
-            //int y = scr.WorkingArea.Top + (scr.WorkingArea.Height - (rc.bottom - rc.top)) / 2;
-            //MoveWindow(hWin, x, y, rc.right - rc.left, rc.bottom - rc.top, true);
+            Screen scr = Screen.FromPoint(new Point(rc.left, rc.top));
+            int x = scr.WorkingArea.Left + (scr.WorkingArea.Width - (rc.right - rc.left)) / 2;
+            int y = scr.WorkingArea.Top + (scr.WorkingArea.Height - (rc.bottom - rc.top)) / 2;
+            MoveWindow(hWin, x, y, rc.right - rc.left, rc.bottom - rc.top, true);
         }
         #endregion
         static ServiceLoader loader { get; set; }
@@ -43,7 +46,6 @@ namespace BigBeer.Core.Service
                 loader = new ServiceLoader();
             StartCommand();
         }
-
         /// <summary>
         /// 日志记录器
         /// </summary>
