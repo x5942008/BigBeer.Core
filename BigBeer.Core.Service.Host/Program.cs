@@ -29,7 +29,7 @@ namespace BigBeer.Core.Service
         static void Main(string[] args)
         {
             ToScreenCenter();
-            Console.Title = "布德软件服务框架";
+            Console.Title = "大雄软件服务框架";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("*************大雄软件服务框架*************");
             Console.WriteLine("*       email:549590615@qq.com           *");
