@@ -25,6 +25,7 @@ namespace BigBeer.Core.CookieAuthSample
             //必须注入
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                  .AddCookie(options => {
+                     options.ExpireTimeSpan = TimeSpan.FromDays(1);//设置过期时间
                      options.LoginPath = "/Account/Login"; //不通过验证的重定向登陆页面
                  });
             services.AddMvc();
