@@ -22,7 +22,9 @@ namespace BigBeer.Core.CookieAuthSample.Controllers
             }
             var claims = new List<Claim>() {
                 new Claim(ClaimTypes.Name,user+pwd),
-                new Claim(ClaimTypes.Role,"admin")
+                new Claim(ClaimTypes.Role,"admin"),
+                new Claim("id","123"),
+                new Claim("role","角色名称"),
             };
             var claimIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimIdentity));

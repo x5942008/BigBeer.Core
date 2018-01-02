@@ -15,6 +15,22 @@ namespace BigBeer.Core.CookieAuthSample.Controllers
             return View();
         }
 
+        [Authorize]
+        public JsonResult Te()
+        {
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            foreach (var item in User.Claims)
+            {
+                dic.Add(item.Type,item.Value);
+            }
+            var result = new
+            {
+                a = dic,
+                b = User.Identity.Name
+            };
+            return Json(result);
+        }
+
         public JsonResult Linq()
         {
             var a = new[] { "1", "2", "3" };
