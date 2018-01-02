@@ -13,4 +13,8 @@
     <None Include="Program.Command.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BigBeer.Core.Service.Lib\BigBeer.Core.Service.Lib.csproj" />
+  </ItemGroup>
+
 </Project>

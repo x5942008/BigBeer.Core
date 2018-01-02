@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BigBeer.Core.Extensions.Json\BigBeer.Core.Extensions.Json.csproj" />
+  </ItemGroup>
+
 </Project>
