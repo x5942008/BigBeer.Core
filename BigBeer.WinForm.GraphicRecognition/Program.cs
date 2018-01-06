@@ -16,7 +16,7 @@ namespace BigBeer.WinForm.GraphicRecognition
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new 图文识别());
         }
     }
 }
