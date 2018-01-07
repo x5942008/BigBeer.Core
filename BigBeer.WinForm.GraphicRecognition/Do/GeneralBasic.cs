@@ -7,19 +7,18 @@ using System.Threading.Tasks;
 
 namespace BigBeer.WinForm.GraphicRecognition.Do
 {
-    public class GeneralBasic
+    public static class GeneralBasic
     {
-        // 设置APPID/AK/SK
-        //static string APP_ID = "你的 App ID";
-        static string API_KEY = "vGgwbTEi6iEASwUh5uw8Eq25";
-        static string SECRET_KEY = "uZeTaYeZZ5GoxxWihYWVVUau5scHEH0l";
-        public static Baidu.Aip.Ocr.Ocr client => new Baidu.Aip.Ocr.Ocr(API_KEY, SECRET_KEY);
-
-        public string General(string path)
+        /// <summary>
+        /// 本地图片识别
+        /// </summary>
+        /// <param name="path">本地路径</param>
+        /// <returns></returns>
+        public static string General(string path)
         {
             var image = File.ReadAllBytes(path);
             // 调用通用文字识别, 图片参数为本地图片，可能会抛出网络等异常，请使用try/catch捕获
-            var result = client.GeneralBasic(image);
+            var result = AI.client.GeneralBasic(image);
             Console.WriteLine(result);
             // 如果有可选参数
             var options = new Dictionary<string, object>{
@@ -29,7 +28,7 @@ namespace BigBeer.WinForm.GraphicRecognition.Do
         //{"probability", "true"}
     };
             // 带参数调用通用文字识别, 图片参数为本地图片
-            result = client.GeneralBasic(image, options);
+            result = AI.client.GeneralBasic(image, options);
             List<string> list = new List<string>();
             var temp = result["words_result"];
             if (temp == null)
@@ -43,12 +42,17 @@ namespace BigBeer.WinForm.GraphicRecognition.Do
             }
             return ai.ToString();
         }
-        public string GeneralBasicUrl(string urlpath)
+        /// <summary>
+        /// 网络图片识别
+        /// </summary>
+        /// <param name="urlpath">网络路径</param>
+        /// <returns></returns>
+        public static string GeneralBasicUrl(string urlpath)
         {
             //var url = "https//www.x.com/sample.jpg";
 
             // 调用通用文字识别, 图片参数为远程url图片，可能会抛出网络等异常，请使用try/catch捕获
-            var result = client.GeneralBasicUrl(urlpath);
+            var result = AI.client.GeneralBasicUrl(urlpath);
             Console.WriteLine(result);
             // 如果有可选参数
             var options = new Dictionary<string, object>{
@@ -58,7 +62,7 @@ namespace BigBeer.WinForm.GraphicRecognition.Do
         //{"probability", "true"}
     };
             // 带参数调用通用文字识别, 图片参数为远程url图片
-            result = client.GeneralBasicUrl(urlpath, options);
+            result = AI.client.GeneralBasicUrl(urlpath, options);
             List<string> list = new List<string>();
             var temp = result["words_result"];
             var ai = new StringBuilder();

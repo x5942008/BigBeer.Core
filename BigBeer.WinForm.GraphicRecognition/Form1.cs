@@ -48,7 +48,7 @@ namespace BigBeer.WinForm.GraphicRecognition
                 }
                 else
                 {
-                   var data =  new GeneralBasic().General(fileDialog.FileName);
+                   var data =  GeneralBasic.General(fileDialog.FileName);
                     richTextBox1.Text =data;
                     ////获取用户选择的文件，并判断文件大小不能超过20K，fileInfo.Length是以字节为单位的
                     //FileInfo fileInfo = new FileInfo(fileDialog.FileName);
@@ -85,9 +85,9 @@ namespace BigBeer.WinForm.GraphicRecognition
             //{
             //    MessageBox.Show("请输入正确的图片地址");
             //}
-                    var img = new GetImage().Page_Load(textBox1.Text);
+                    var img = GetImage.Page_Load(textBox1.Text);
                     pictureBox1.Image = img;
-                    var data = new GeneralBasic().GeneralBasicUrl(textBox1.Text);
+                    var data = GeneralBasic.GeneralBasicUrl(textBox1.Text);
                     richTextBox1.Text = data;
 
         }
