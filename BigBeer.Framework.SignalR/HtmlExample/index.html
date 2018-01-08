@@ -1,11 +1,6 @@
-﻿/*
-范例页面
-scr网络地址就是发布的地址
-client对象里的方法就是Hub自定义的函数名调用
-startup已配置可跨域
-*/
-<head>
+﻿<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>跨服聊天</title>
 </head>
 <h1>在线聊天室</h1>
 <div class="container">
@@ -29,20 +24,20 @@ startup已配置可跨域
         // Reference the auto-generated proxy for the hub.
         $.connection.hub.url = "http://10.0.0.5:66/signalr/Hubs"
         // Create a function that the hub can call back to display messages.
-        chat.client.addNewMessageToPage = function (message) {
+        chat.client.addNewMessageToPage = function (name, message) {
             // Add the message to the page.
-            $('#discussion').append('<li><strong>' + htmlEncode("大雄")
+            $('#discussion').append('<li><strong>' + htmlEncode(name)
                 + '</strong>: ' + htmlEncode(message) + '</li>');
         };
         // Get the user name and store it to prepend to messages.
-        // $('#displayname').val(prompt('请输入你的昵称:', ''));
+        $('#displayname').val("大雄");
         // Set initial focus to message input box.
         $('#message').focus();
         // Start the connection.
         $.connection.hub.start().done(function () {
             $('#sendmessage').click(function () {
                 // Call the Send method on the hub.
-                chat.server.send($('#message').val());
+                chat.server.send($('#displayname').val(), $('#message').val());
                 // Clear text box and reset focus for next comment.
                 $('#message').val('').focus();
             });
