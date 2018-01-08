@@ -15,5 +15,9 @@ namespace BigBeer.Framework.SignalR
         {
             Clients.All.addNewMessageToPage(name, message);
         }
+        public void Send(string message)
+        {
+            Clients.All.addNewMessageToPage(message);
+        }
     }
 }
