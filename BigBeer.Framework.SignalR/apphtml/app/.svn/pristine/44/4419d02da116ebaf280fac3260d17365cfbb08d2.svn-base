@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+<body>
+    <p class="aui-padded-10">
+    	<p>清除缓存后，下次启动不显示广告。此功能是为了APP版本升级，云端跟换启动图设计的。</p>
+    	<a class="aui-btn aui-btn-primary" tapmode onclick="clearCache();">清除缓存</a><br /><br />
+    </p>
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+	var launchImageModule = null;
+    apiready = function () {
+		launchImageModule = api.require('launchImage');
+    
+		setTimeout(function(){
+			api.removeLaunchView();
+		},800);
+		
+    }
+   	
+   	// 清除缓存
+   	function clearCache(){
+		launchImageModule.clearCache({
+		    reGet: true,
+		    isPortrait: true
+		}, function(ret, err){
+		if(ret.status){
+				var path = ret.src;
+				$api.setStorage('launchImage', path);
+				$api.rmStorage('launchImageAd');
+				api.alert({msg: "清除缓存成功，重启APP以重新获取广告图片"});
+			}else{
+				api.alert({msg: "清除缓存失败"});
+			    //api.alert({msg: err.msg});
+			}
+		});
+   	}
+</script>
+</html>

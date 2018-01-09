@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+    
+        #input{
+            position: fixed;
+            width:100%;
+            bottom:0;
+            left: 0;
+            background: #fff;
+        }
+        #input .aui-btn{
+            position: relative;
+            top: 10px;
+            padding: 0
+        }
+        #aui-chat{
+            margin-bottom: 50px;
+        }
+        .clear{ clear:both} 
+    </style>
+</head>
+
+    <body>
+    <section class="aui-chat aui-clearfix" id="aui-chat">
+        <div class="aui-chat-header">2016年7月13日</div>
+        <div class="aui-chat-item aui-chat-left">
+            <div class="aui-chat-media">
+                <img src="../image/demo2.png">
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    Hello AUI 2.0!
+                </div>
+                <div class="aui-chat-status aui-chat-status-refresh">
+                    <i class="aui-iconfont aui-icon-correct aui-text-success"></i>
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-right">
+            <div class="aui-chat-media">
+                <img src="../image/liulangnan.png">
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">流浪男</div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    你好！
+                </div>
+                <div class="aui-chat-status">
+                    <i class="aui-iconfont aui-icon-info aui-text-danger"></i>
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-left">
+            <div class="aui-chat-media">
+                <img src="../image/demo2.png">
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    <img src="../image/l1.png">
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-right">
+            <div class="aui-chat-media">
+                <img src="../image/liulangnan.png">
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">流浪男</div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    以前拍摄的牛背山星空
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-left">
+            <div class="aui-chat-media">
+                <img src="../image/demo2.png">
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    <img src="../image/l2.png">
+                </div>
+            </div>
+        </div>
+         <div class="clear"></div> 
+         <ul  id="discussion"></ul>
+    </section>
+    <div id="input">
+       <div class="aui-col-xs-10"> <input class="aui-padded-l-10" placeholder="输入内容" type="text" id="chatmessage"></div> <div class="aui-btn aui-btn-info aui-col-xs-2" id="send">发送</div>
+    </div>
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script src="http://10.0.0.5:66/Scripts/jquery-1.10.2.min.js"></script>
+<script src="http://10.0.0.5:66/Scripts/jquery.signalR-2.0.3.min.js"></script>
+<script src="http://10.0.0.5:66/signalr/hubs"></script>
+<script>
+     $(function () {
+            var chat = $.connection.chatHub;
+            // Reference the auto-generated proxy for the hub.
+            $.connection.hub.url = "http://10.0.0.5:66/signalr/Hubs"
+            // Create a function that the hub can call back to display messages.
+            chat.client.addNewMessageToPage = function (name,message) {
+                // Add the message to the page.
+                $('#discussion').append('<li><strong>' + htmlEncode(name)
+                    + '</strong>: ' + htmlEncode(message) + '</li>');
+            };
+            // Get the user name and store it to prepend to messages.
+            // $('#displayname').val("大雄");
+            // Set initial focus to message input box.
+            $('#chatmessage').focus();
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+                $('#send').click(function () {
+                    // Call the Send method on the hub.
+                    chat.server.send("大雄", $('#chatmessage').val());
+                    // Clear text box and reset focus for next comment.
+                    $('#message').val('').focus();
+                });
+            });
+        });
+        // This optional function html-encodes messages for display in the page.
+        function htmlEncode(value) {
+            // var encodedValue = $('<div />').text(value).html();
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+</script>
+<script type="text/javascript">
+</script>
+</body>
+</html>

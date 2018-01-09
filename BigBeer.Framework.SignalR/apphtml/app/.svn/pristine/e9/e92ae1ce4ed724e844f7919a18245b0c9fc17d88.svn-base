@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <style type="text/css">
+	    html,body{
+	    	margin: 0;
+	    	padding: 0;
+	        height: 100%;
+	        width: 100%;
+	    }
+	    body{
+			background-size: 100%;
+			background-position: bottom center;
+
+	    }
+	    #imageAd{
+	    	width: 100%;height: 100%;
+	    	background-position: center;
+	    	background-size: 100%;
+	    }
+    </style>
+</head>
+<body id="body">
+<!--tapmode onclick="openUrl('http://www.apicloud.com/');"-->
+	<div id="imageAd"></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery.js"></script>
+<script type="text/javascript">
+
+
+	apiready = function(){
+        var launchImage = $api.getStorage('launchImage');		// 启动图
+        var launchImageAd = $api.getStorage('launchImageAd');	// 读取本地启动广告图asdf
+		var arrimg = JSON.parse(launchImageAd);
+        var d = new Date().getSeconds();
+          var len = arrimg.length;
+          var url = arrimg[d%len];
+
+		document.getElementById("body").style.backgroundImage="url("+launchImage+")";
+		document.getElementById("imageAd").style.backgroundImage="url("+url.img+")";
+
+		setTimeout(function(){
+			api.removeLaunchView();
+			console.log("removeLaunchView");
+		},800);
+
+		setTimeout(function(){
+			close();
+			console.log("close launchImageAd");
+		},4000);
+         $("#imageAd").on('click',function(){
+        api.setFullScreen({
+		    fullScreen:false
+		});
+             alert(url.u)
+             return;
+		api.openWin({
+		    name: 'url_win',
+		    url: 'widget://html/url_win.html',
+		    pageParam: {url: url.u},
+		});
+    })
+	};
+
+    function close(){
+		api.setFullScreen({
+		    fullScreen:false
+		});
+        api.openFrame({
+            name: 'footer_tab',
+            url: 'footer_tab_win.html',
+            bounces: false,
+            rect: {
+		        x:0,
+		        y:0,
+		        w:'auto',
+		        h:api.frameHeight
+            },
+			pageParam: {
+		        frameHeight: api.frameHeight
+		    },
+        });
+
+    }
+
+    function openUrl(url){
+		api.setFullScreen({
+		    fullScreen:false
+		});
+		api.openWin({
+		    name: 'url_win',
+		    url: 'widget://html/url_win.html',
+		    pageParam: {url: url},
+		});
+    }
+</script>
+</html>

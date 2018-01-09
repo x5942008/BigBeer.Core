@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <style type="text/css">
+  *{
+    margin: 0;padding: 0;
+  }
+  #wrap,body,html,#wrap div,#start{
+    width: 100%;
+    height: 100%;
+  }
+        #start {
+           background: url(image/start.jpg) no-repeat center / cover;
+        }
+    #wrap{
+      position: relative;
+        z-index: 3;
+      display: none;
+    }
+  #wrap div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #time{
+    position: absolute;
+    right:5%;
+    top: 5%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 20px;
+    font-size: 0.6rem;
+  }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!-- <div id="wrap">
+        <div class="" style="background: url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1513606057&di=d761e306795bba458eecc9eb55ccca36&src=http://img3.duitang.com/uploads/item/201412/20/20141220165157_YjC88.jpeg) no-repeat center/ cover;"></div>
+      <div class="" style="background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513616121586&di=e27dbc714cac8067fc65a5d7abf349b4&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201511%2F21%2F20151121142853_sQyUu.jpeg) no-repeat center/ cover;"></div>
+      <div class="" style="background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513616121585&di=3d3833e63b625a5760fa36ff09e4cadb&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201410%2F24%2F20141024135837_WEFMX.jpeg) no-repeat center/ cover;"></div>
+      <p id="time"><em id="">0</em>/5</p>
+    </div> -->
+    <div>
+        <p>
+            <spa></spa>
+            <spa></spa>
+            <spa></spa>
+        </p>
+        <p>
+              <spa></spa>
+              <spa></spa>
+              <spa></spa>
+        </p>
+    </div>
+       
+
+    
+    
+    <div id="start"></div>
+    <div id="wrap"><div class="" style="background: url('+arrimg[d%3]+') no-repeat center/ cover;"></div><p id="time"><em></em>/5</p></div>
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript" src="./script/jquery.js"></script>
+<script type="text/javascript">
+
+
+        apiready = function(){
+        var n = 0;
+        if(!localStorage['status']){
+        localStorage['status'] = 'true';
+            setTimeout(function(){
+                 openi();
+            },2500)
+        }else {
+        var arrimg = [
+        'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1513606057&di=d761e306795bba458eecc9eb55ccca36&src=http://img3.duitang.com/uploads/item/201412/20/20141220165157_YjC88.jpeg',
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513616121586&di=e27dbc714cac8067fc65a5d7abf349b4&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201511%2F21%2F20151121142853_sQyUu.jpeg',
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513616121585&di=3d3833e63b625a5760fa36ff09e4cadb&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201410%2F24%2F20141024135837_WEFMX.jpeg'
+        ]
+        var d = new Date().getSeconds(),time;
+        $("#wrap div").attr({'style':'background: url('+arrimg[d%3]+') no-repeat center/ cover;'});
+        setTimeout(function(){
+            $("#wrap").show();
+            
+            time = setInterval(function() {
+                $("#start").hide();
+            fn()
+            },1000)
+        },2500)
+        fn()
+        }
+    
+        function fn(){
+            n++;
+            $("#time em").text(n)
+            if(n == 5){
+            clearTimeout(time)
+            openi()
+            }
+        }
+        function openi() {
+              api.openFrame({
+              name: 'index',
+              url: 'index.html',
+              rect: {
+                  x: 0,
+                  y: 0,
+                  w: 'auto',
+                  h: 'auto'
+              },
+              animation:{
+                type:"fade",                //动画类型（详见动画类型常量）
+                subType:"from_right",       //动画子类型（详见动画子类型常量）
+                duration:300                //动画过渡时间，默认300毫秒
+            }
+            });
+        }
+
+ };
+</script>
+</html>

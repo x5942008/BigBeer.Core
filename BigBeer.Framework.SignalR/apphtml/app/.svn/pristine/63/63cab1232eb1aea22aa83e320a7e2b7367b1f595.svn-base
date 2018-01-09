@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>index</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript" src="./script/jquery.js"></script>
+<script type="text/javascript">
+	var launchImageModule = null;
+
+// var arrimg = [121,444,555]
+//   var d = new Date().getSeconds();
+//   var len = arrimg.length;
+//   var url = arrimg[d%len];asdf
+
+
+    apiready = function(){
+
+        api.setStatusBarStyle({
+            style: 'light',
+        });
+        launchImageModule = api.require('launchImage');
+
+        var launchImage = $api.getStorage('launchImage');		// 启动图
+        var launchImageAd = $api.getStorage('launchImageAd');	// 读取本地启动广告图21121憨呼呼
+        if(typeof(launchImage) != 'undefined' && typeof(launchImageAd) != 'undefined'){
+			api.setFullScreen({
+			    fullScreen:true
+			});
+	        api.openFrame({
+	            name: 'launchImageAd',
+	            url: './html/launchImageAd.html',
+	            bounces: false,
+	            rect: {
+			        x:0,
+			        y:0,
+			        w:'auto',
+			        h:'auto'
+	            }
+	        });
+
+        }else{
+
+	        api.openFrame({
+	            name: 'footer_tab',
+	            url: './html/footer_tab_win.html',
+	            rect: {
+			        x:0,
+			        y:0,
+			        w:'auto',
+			        h:api.frameHeight
+	            },
+				pageParam: {
+			        frameHeight: api.frameHeight
+			    },
+	        });
+        }
+
+        // 延迟获取广告地址
+	  api.ajax({
+                url: 'http://www.baxlan.com/api_video2/?action=appad&type=800 ',
+                method: 'get',
+                data: {}
+            }, function(r, err) {
+                if (r) {
+                    var arr = []
+                  //  api.alert({ msg: JSON.stringify(r) });
+                  //  getlaunchImageAd( arrimg );
+                     //   getlaunchImage();
+                    for(var i=0; i<r.ad.length; i++){
+                        arr.push({'img':r.ad[i].pic,'u':r.ad[i].isourl})
+                    }
+
+                     getlaunchImageAd( arr );
+                     getlaunchImage();
+                } else {
+                    api.alert({ msg: JSON.stringify(err) });
+                }
+            });
+
+
+    }
+
+
+    // 获取广告图
+    function getlaunchImageAd( url ) {
+        var arr = []
+        for(var i=0; i<url.length; i++){
+            api.imageCache({
+            url: url[i].img,
+            thumbnail: false,
+            },function(ret,err){
+            if (ret) {
+
+            var path = ret.url;
+            arr.push({'img':path});
+            if(arr.length == url.length){
+                for(var j=0; j<arr.length; j++){
+                    arr[j].u = url[j].url
+                }
+                var json = JSON.stringify(arr);
+                 $api.setStorage('launchImageAd',json);
+            }
+
+
+            }
+            });
+        }
+
+    }
+
+
+
+   function getlaunchImage(){
+		launchImageModule.get({
+		    debug: false,
+		    isPortrait: true
+		}, function(ret, err){
+		    if(ret.status){
+				//api.alert({msg: ret.src});
+				var path = ret.src;
+				$api.setStorage('launchImage', path);
+		}else{
+				api.alert({msg: err.msg});
+		    }
+		});
+    }
+</script>
