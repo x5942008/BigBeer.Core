@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Core2_0", "Service.Core2_0\Service.Core2_0.csproj", "{8EDF585E-B0A7-45D3-8A70-47F16C5B1AA2}"
 EndProject
@@ -78,6 +78,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForm", "WinForm", "{F8519726-CBAD-4296-BC8F-8F70014BB018}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.WinForm.GraphicRecognition", "BigBeer.WinForm.GraphicRecognition\BigBeer.WinForm.GraphicRecognition.csproj", "{E549F954-26EC-4C51-BC82-FE380202D07C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IOC", "IOC", "{7B06E4AE-49F7-4795-BAAD-2C705B841832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.DependencyInjection", "BigBeer.Core.DependencyInjection\BigBeer.Core.DependencyInjection.csproj", "{49BF2776-987F-4B93-8DD9-85EEC291D859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +205,10 @@ Global
 		{E549F954-26EC-4C51-BC82-FE380202D07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E549F954-26EC-4C51-BC82-FE380202D07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E549F954-26EC-4C51-BC82-FE380202D07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BF2776-987F-4B93-8DD9-85EEC291D859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BF2776-987F-4B93-8DD9-85EEC291D859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BF2776-987F-4B93-8DD9-85EEC291D859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BF2776-987F-4B93-8DD9-85EEC291D859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -229,6 +237,7 @@ Global
 		{3C507711-2DDC-4A11-8A69-4C77043032E2} = {0379E7C2-8701-421F-B4AC-4DA514794079}
 		{CF307084-DD72-47A0-9491-B954956FC3B9} = {8BCADB6B-2F6C-4EE8-A004-37731736BF7B}
 		{E549F954-26EC-4C51-BC82-FE380202D07C} = {F8519726-CBAD-4296-BC8F-8F70014BB018}
+		{49BF2776-987F-4B93-8DD9-85EEC291D859} = {7B06E4AE-49F7-4795-BAAD-2C705B841832}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
