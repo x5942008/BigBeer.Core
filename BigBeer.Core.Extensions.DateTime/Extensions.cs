@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+
 namespace BigBeer.Core.Extensions
 {
     public static partial class Extensions
@@ -7,7 +8,7 @@ namespace BigBeer.Core.Extensions
         /// <summary>
         /// 返回年龄
         /// </summary>
-        /// <param name="Date类型的出生时间"> </param>
+        /// <param name="Date类型的出生时间"></param>
         /// <returns></returns>
         public static int Age(this DateTime @this)
         {

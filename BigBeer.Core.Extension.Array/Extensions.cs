@@ -1,8 +1,6 @@
 ﻿
 using System;
 using System.Collections;
-using System.Collections.ObjectModel;
-using System.Linq;
 namespace BigBeer.Core.Extensions
 {
     public static partial class Extensions

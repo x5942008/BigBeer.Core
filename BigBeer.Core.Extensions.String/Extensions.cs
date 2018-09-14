@@ -1,10 +1,10 @@
-﻿
-using System;
+﻿using System;
 using System.IO;
-using System.Text;
-using System.Security.Cryptography;
-using System.Text.RegularExpressions;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+
 namespace BigBeer.Core.Extensions
 {
     public static partial class Extensions
@@ -213,7 +213,7 @@ namespace BigBeer.Core.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        public static bool IsNotNull(this String @this)
+        public static bool IsNotNull(this string @this)
         {
             return @this != null;
         }
@@ -223,7 +223,7 @@ namespace BigBeer.Core.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        public static bool IsNull(this String @this)
+        public static bool IsNull(this string @this)
         {
             return @this == null;
         }
@@ -233,7 +233,7 @@ namespace BigBeer.Core.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        public static bool IsNullOrWhiteSpace(this String @this)
+        public static bool IsNullOrWhiteSpace(this string @this)
         {
             return string.IsNullOrWhiteSpace(@this);
         }
@@ -341,7 +341,7 @@ namespace BigBeer.Core.Extensions
         /// <returns></returns>
         public static Boolean IsNotNullOrWhiteSpace(this string value)
         {
-            return !String.IsNullOrWhiteSpace(value);
+            return !string.IsNullOrWhiteSpace(value);
         }
 
         /// <summary>
