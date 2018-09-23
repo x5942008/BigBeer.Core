@@ -79,23 +79,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.Authe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.String", "BigBeer.Core.Extensions.String\BigBeer.Core.Extensions.String.csproj", "{AC9B57B3-5A43-4DF2-9C0C-F21128ADA7E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.DateTime", "BigBeer.Core.Extensions.DateTime\BigBeer.Core.Extensions.DateTime.csproj", "{64C23321-525E-4919-82B3-021CF3365BE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.DateTime", "BigBeer.Core.Extensions.DateTime\BigBeer.Core.Extensions.DateTime.csproj", "{64C23321-525E-4919-82B3-021CF3365BE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Json", "BigBeer.Core.Extensions.Json\BigBeer.Core.Extensions.Json.csproj", "{269FAF3C-2A05-4593-84F7-520DE1203471}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Json", "BigBeer.Core.Extensions.Json\BigBeer.Core.Extensions.Json.csproj", "{269FAF3C-2A05-4593-84F7-520DE1203471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Array", "BigBeer.Core.Extension.Array\BigBeer.Core.Extensions.Array.csproj", "{D452324D-70CE-43D4-BAA3-D9A0217E305B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Array", "BigBeer.Core.Extension.Array\BigBeer.Core.Extensions.Array.csproj", "{D452324D-70CE-43D4-BAA3-D9A0217E305B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Decimal", "BigBeer.Core.Extensions.Decimal\BigBeer.Core.Extensions.Decimal.csproj", "{9B9606FB-952C-4B60-9F5C-6A4F1C4D8728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Decimal", "BigBeer.Core.Extensions.Decimal\BigBeer.Core.Extensions.Decimal.csproj", "{9B9606FB-952C-4B60-9F5C-6A4F1C4D8728}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Enum", "BigBeer.Core.Extensions.Enum\BigBeer.Core.Extensions.Enum.csproj", "{46AAAA04-F76E-40A6-8C38-2831B988C455}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Enum", "BigBeer.Core.Extensions.Enum\BigBeer.Core.Extensions.Enum.csproj", "{46AAAA04-F76E-40A6-8C38-2831B988C455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.Html", "BigBeer.Core.Extensions.Html\BigBeer.Core.Extensions.Html.csproj", "{D04B2E06-3F62-4CF3-8D0F-F29F8264E366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.Html", "BigBeer.Core.Extensions.Html\BigBeer.Core.Extensions.Html.csproj", "{D04B2E06-3F62-4CF3-8D0F-F29F8264E366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.ITQueryable", "BigBeer.Core.Extensions.ITQueryable\BigBeer.Core.Extensions.ITQueryable.csproj", "{CFA92579-AE72-4870-B330-5F7CA492DA5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.ITQueryable", "BigBeer.Core.Extensions.ITQueryable\BigBeer.Core.Extensions.ITQueryable.csproj", "{CFA92579-AE72-4870-B330-5F7CA492DA5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Core.Extensions.TCollection", "BigBeer.Core.Extensions.TCollection\BigBeer.Core.Extensions.TCollection.csproj", "{01CB3192-A147-4F5B-93B2-1950A716A653}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.TCollection", "BigBeer.Core.Extensions.TCollection\BigBeer.Core.Extensions.TCollection.csproj", "{01CB3192-A147-4F5B-93B2-1950A716A653}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.UEditor.NetCore", "BigBeer.UEditor.NetCore\BigBeer.UEditor.NetCore.csproj", "{130DB586-85D6-487B-832D-FDF82C695B14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.UEditor.NetCore", "BigBeer.UEditor.NetCore\BigBeer.UEditor.NetCore.csproj", "{130DB586-85D6-487B-832D-FDF82C695B14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.AuthCore.Sample", "BigBeer.Framework.Mvc.AuthCore.Sample\BigBeer.Framework.Mvc.AuthCore.Sample.csproj", "{478DC80A-5419-4489-A742-7C8E579C92A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.ImageService", "BigBeer.Framework.Mvc.ImageService\BigBeer.Framework.Mvc.ImageService.csproj", "{56593D75-7ECE-4F07-896E-EBA1F4617196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +247,14 @@ Global
 		{130DB586-85D6-487B-832D-FDF82C695B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130DB586-85D6-487B-832D-FDF82C695B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{130DB586-85D6-487B-832D-FDF82C695B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478DC80A-5419-4489-A742-7C8E579C92A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478DC80A-5419-4489-A742-7C8E579C92A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478DC80A-5419-4489-A742-7C8E579C92A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478DC80A-5419-4489-A742-7C8E579C92A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56593D75-7ECE-4F07-896E-EBA1F4617196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56593D75-7ECE-4F07-896E-EBA1F4617196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56593D75-7ECE-4F07-896E-EBA1F4617196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56593D75-7ECE-4F07-896E-EBA1F4617196}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -278,6 +290,7 @@ Global
 		{D04B2E06-3F62-4CF3-8D0F-F29F8264E366} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{CFA92579-AE72-4870-B330-5F7CA492DA5B} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{01CB3192-A147-4F5B-93B2-1950A716A653} = {601B7607-8582-4122-823A-8FE5CA52DB90}
+		{478DC80A-5419-4489-A742-7C8E579C92A3} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
