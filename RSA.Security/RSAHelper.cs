@@ -8,10 +8,21 @@ namespace RSA.Security
 {
     public class RSAHelper
     {
-
+        /// <summary>
+        /// 私钥
+        /// </summary>
         private readonly System.Security.Cryptography.RSA _privateKeyRsaProvider;
+        /// <summary>
+        /// 公钥
+        /// </summary>
         private readonly System.Security.Cryptography.RSA _publicKeyRsaProvider;
+        /// <summary>
+        /// 散列算法
+        /// </summary>
         private readonly HashAlgorithmName _hashAlgorithmName;
+        /// <summary>
+        /// 编码
+        /// </summary>
         private readonly Encoding _encoding;
 
         /// <summary>
