@@ -47,7 +47,7 @@ namespace BigBeer.Framework.Mvc.AuthCore.Sample
                         }.ToJson());
                     }
                 };
-                o.Serect = "buday.copyright.buydee.cn.sun".EncodeBase64();
+                o.Serect = "bigbeer.copyright.cn".EncodeBase64();
             });
             services.AddMvc();
         }
