@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BigBeer.Core.Service.Framework
+namespace BigBeer.Core.Service
 {
     public static partial class Extensions
     {
