@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BigBeer.Framework.Mvc.Authentication.Jwt;
+using BigBeer.Framework.Service.Framework;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using BigBeer.Core.Extensions;
 
 namespace BigBeer.Framework.Mvc.AuthCore.Sample
 {
@@ -23,15 +27,29 @@ namespace BigBeer.Framework.Mvc.AuthCore.Sample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
+            //添加认证服务
+            services.AddAuthentication((options) => {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearerAuthencation((o) => {
+                o.Events = new JwtBearerEvents()
+                {
+                    //认证失败的回调
+                    OnChallenge = c => {
+                        c.Response.StatusCode = 200;
+                        c.Response.ContentType = "application/json";
+                        c.HandleResponse();
+                        return c.Response.WriteAsync(new
+                        {
+                            c = 401,
+                            m = "权限验证失败",
+                            s = false
+                        }.ToJson());
+                    }
+                };
+                o.Serect = "buday.copyright.buydee.cn.sun".EncodeBase64();
             });
-
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
