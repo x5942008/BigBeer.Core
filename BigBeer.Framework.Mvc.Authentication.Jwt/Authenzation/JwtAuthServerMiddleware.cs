@@ -43,7 +43,7 @@ namespace BigBeer.Framework.Mvc.Authentication.Jwt.Authenzation
                 Secret = serverOptions.Secret
             };
             jwttoken.AddExp(DateTime.Now.AddMinutes(serverOptions.ExpireTimeSpan.TotalMinutes))
-               .AddIss("@buday.gold.cusumer.auth")
+               .AddIss("@bigbeer.auth")
                .AddIat(DateTime.Now);
             var singonture = string.Concat(jwttoken.Header.Base64UrlEncode(), ".", jwttoken.Payload.Base64UrlEncode());
             //签名
