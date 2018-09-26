@@ -1,2 +1,0 @@
-﻿该项目以及BigBeer.Framework.Mvc.Authentication.Jwt出现未知技术错误无法解决。
-目前技术有限只能另外重新新建一个项目。此项目只能作废。
