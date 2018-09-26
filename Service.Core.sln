@@ -97,9 +97,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Core.Extensions.TCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.UEditor.NetCore", "BigBeer.UEditor.NetCore\BigBeer.UEditor.NetCore.csproj", "{130DB586-85D6-487B-832D-FDF82C695B14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.AuthCore.Sample", "BigBeer.Framework.Mvc.AuthCore.Sample\BigBeer.Framework.Mvc.AuthCore.Sample.csproj", "{478DC80A-5419-4489-A742-7C8E579C92A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Framework.Mvc.AuthCore.Sample", "BigBeer.Framework.Mvc.AuthCore.Sample\BigBeer.Framework.Mvc.AuthCore.Sample.csproj", "{478DC80A-5419-4489-A742-7C8E579C92A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.ImageService", "BigBeer.Framework.Mvc.ImageService\BigBeer.Framework.Mvc.ImageService.csproj", "{56593D75-7ECE-4F07-896E-EBA1F4617196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Framework.Mvc.ImageService", "BigBeer.Framework.Mvc.ImageService\BigBeer.Framework.Mvc.ImageService.csproj", "{56593D75-7ECE-4F07-896E-EBA1F4617196}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework.JWT", "EntityFramework.JWT", "{577B8CC1-A72E-45F8-A616-8D67D3C73AAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
