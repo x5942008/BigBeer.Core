@@ -99,6 +99,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Framework.Mvc.Image
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.Authentication.Jwt", "BigBeer.Framework.Mvc.Authentication.Jwt\BigBeer.Framework.Mvc.Authentication.Jwt.csproj", "{306199D9-3D39-490D-956A-2BE86C4B290E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buday.Framework.Mvc.Authentication.Jwt.Sample", "Buday.Framework.Mvc.Authentication.Jwt.Sample\Buday.Framework.Mvc.Authentication.Jwt.Sample.csproj", "{B133DAA0-F554-4BFD-AF87-1FA3C0038116}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -249,6 +251,10 @@ Global
 		{306199D9-3D39-490D-956A-2BE86C4B290E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{306199D9-3D39-490D-956A-2BE86C4B290E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{306199D9-3D39-490D-956A-2BE86C4B290E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B133DAA0-F554-4BFD-AF87-1FA3C0038116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B133DAA0-F554-4BFD-AF87-1FA3C0038116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B133DAA0-F554-4BFD-AF87-1FA3C0038116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B133DAA0-F554-4BFD-AF87-1FA3C0038116}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -284,6 +290,7 @@ Global
 		{CFA92579-AE72-4870-B330-5F7CA492DA5B} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{01CB3192-A147-4F5B-93B2-1950A716A653} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{306199D9-3D39-490D-956A-2BE86C4B290E} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
+		{B133DAA0-F554-4BFD-AF87-1FA3C0038116} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
