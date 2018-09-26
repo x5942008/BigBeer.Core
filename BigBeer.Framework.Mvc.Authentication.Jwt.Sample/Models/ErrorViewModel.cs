@@ -1,6 +1,6 @@
 using System;
 
-namespace Buday.Framework.Mvc.Authentication.Jwt.Sample.Models
+namespace BigBeer.Framework.Mvc.Authentication.Jwt.Sample.Models
 {
     public class ErrorViewModel
     {

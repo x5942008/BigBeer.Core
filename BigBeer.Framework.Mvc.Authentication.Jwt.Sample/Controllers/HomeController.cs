@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Buday.Framework.Mvc.Authentication.Jwt.Sample.Models;
+using BigBeer.Framework.Mvc.Authentication.Jwt.Sample.Models;
 
-namespace Buday.Framework.Mvc.Authentication.Jwt.Sample.Controllers
+namespace BigBeer.Framework.Mvc.Authentication.Jwt.Sample.Controllers
 {
     public class HomeController : Controller
     {

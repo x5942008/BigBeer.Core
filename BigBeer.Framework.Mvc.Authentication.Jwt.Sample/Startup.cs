@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Buday.Framework.Mvc.Authentication.Jwt.Sample
+namespace BigBeer.Framework.Mvc.Authentication.Jwt.Sample
 {
     public class Startup
     {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Buday.Framework.Mvc.Authentication.Jwt.Sample
+namespace BigBeer.Framework.Mvc.Authentication.Jwt.Sample
 {
     public class Program
     {
