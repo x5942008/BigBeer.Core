@@ -97,7 +97,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.UEditor.NetCore", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Framework.Mvc.ImageService", "BigBeer.Framework.Mvc.ImageService\BigBeer.Framework.Mvc.ImageService.csproj", "{56593D75-7ECE-4F07-896E-EBA1F4617196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buday.Framework.Mvc.Authentication.Jwt", "Buday.Framework.Mvc.Authentication.Jwt\Buday.Framework.Mvc.Authentication.Jwt.csproj", "{306199D9-3D39-490D-956A-2BE86C4B290E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.Authentication.Jwt", "BigBeer.Framework.Mvc.Authentication.Jwt\BigBeer.Framework.Mvc.Authentication.Jwt.csproj", "{306199D9-3D39-490D-956A-2BE86C4B290E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

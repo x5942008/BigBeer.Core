@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Buday.Framework.Mvc.Authentication.Jwt")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("jwt 认证授权框架.提供 json web token 自定义加密验证,颁发token 和验证token授权")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Buday.Framework.Mvc.Authentication.Jwt")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("bigbeer software")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
