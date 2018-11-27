@@ -146,9 +146,11 @@ namespace BigBeer.Core.HelperSample
                 var epoch = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000;
                 var temp = $"{id}UZ{key}UZ{epoch}";
                 var appKey = $"{SHA1(temp, Encoding.UTF8).ToLower()}.{epoch}";
-                Dictionary<string, string> headers = new Dictionary<string, string>();
-                headers.Add("X-APICloud-AppId", id);
-                headers.Add("X-APICloud-AppKey", appKey);
+                Dictionary<string, string> headers = new Dictionary<string, string>
+                {
+                    { "X-APICloud-AppId", id },
+                    { "X-APICloud-AppKey", appKey }
+                };
                 result = await PostAsync("https://p.apicloud.com/api/push/message", paramses.ToJsonPost(), headers, "application/x-www-form-urlencoded");
                 return result;
             }
