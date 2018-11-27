@@ -126,8 +126,8 @@ namespace BigBeer.Core.HelperSample
             {
                 //string id = ConfigurationManager.AppSettings["ApiCloudAppId"];
                 //string key = ConfigurationManager.AppSettings["ApiCloudAppKey"];
-                string id = "A6942863313950";
-                string key = "E046DF86-7BDB-DBFB-0459-2B5CD5EDF25A";
+                string id = "A6942863313950[格式]";
+                string key = "E046DF86-7BDB-DBFB-0459-2B5CD5EDF25A[格式]";
                 Dictionary<string, string> paramses = new Dictionary<string, string>
                 {
                     { "title", title },
@@ -193,9 +193,9 @@ namespace BigBeer.Core.HelperSample
         {
             Dictionary<string, string> dictionary = new Dictionary<string, string>()
             {
-                { "role","21"}
+                { "role","100"}
             };
-            var result = HttpHelper.Post("http://10.0.0.5/Home/Index", dictionary.ToJsonPost(), contentType: "application/x-www-form-urlencoded");
+            var result = HttpHelper.Post("http://192.168.0.1:80/Home/Index", dictionary.ToJsonPost(), contentType: "application/x-www-form-urlencoded");
         }
 
     }
