@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Reflection;
-using RSA.Security;
-using BigBeer.Core.RedisSample;
-using System.Threading;
-using BigBeer.Core.Extensions;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Extensions.Configuration;
 
 namespace Test.Core

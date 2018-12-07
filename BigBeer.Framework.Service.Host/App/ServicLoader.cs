@@ -1,4 +1,5 @@
-﻿using BigBeer.Framework.Service.Framework;
+﻿using BigBeer.Core.Service;
+using BigBeer.Framework.Service.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
