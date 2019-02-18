@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Core2_0", "Service.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeerMiddelwareSample", "BigBeerMiddelware\BigBeerMiddelwareSample.csproj", "{25CB1F74-69C9-4DF2-BEA6-1282EF8F0B29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Core", "Reflect.Core\Test.Core.csproj", "{46001647-C65C-4E31-8FD5-5A7D76B6C20F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommanLineSample", "CommanLineSample\CommanLineSample.csproj", "{DFA89ED0-9D7B-43CC-A34F-39AF727A7A7D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptionsBindSample", "OptionsBindSample\OptionsBindSample.csproj", "{7010EC5C-AC68-49AE-AED7-4B13BA086B4D}"
@@ -95,6 +93,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBeer.Framework.Mvc.Authe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigBeer.Framework.Mvc.Authentication.Jwt.Sample", "BigBeer.Framework.Mvc.Authentication.Jwt.Sample\BigBeer.Framework.Mvc.Authentication.Jwt.Sample.csproj", "{0FED4607-F3DD-492C-B98F-5309AA92C5A0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2019_01_29", "2019_01_29", "{5C46D93F-03F0-499D-A9E3-42A1DDAB2E13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerSolution", "IdentityServerSolution\IdentityServerSolution.csproj", "{AD6D5A3A-2517-4FBC-85C4-9F2A25AB8A23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,10 +111,6 @@ Global
 		{25CB1F74-69C9-4DF2-BEA6-1282EF8F0B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25CB1F74-69C9-4DF2-BEA6-1282EF8F0B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25CB1F74-69C9-4DF2-BEA6-1282EF8F0B29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46001647-C65C-4E31-8FD5-5A7D76B6C20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46001647-C65C-4E31-8FD5-5A7D76B6C20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46001647-C65C-4E31-8FD5-5A7D76B6C20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46001647-C65C-4E31-8FD5-5A7D76B6C20F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFA89ED0-9D7B-43CC-A34F-39AF727A7A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFA89ED0-9D7B-43CC-A34F-39AF727A7A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFA89ED0-9D7B-43CC-A34F-39AF727A7A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -241,6 +239,10 @@ Global
 		{0FED4607-F3DD-492C-B98F-5309AA92C5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FED4607-F3DD-492C-B98F-5309AA92C5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FED4607-F3DD-492C-B98F-5309AA92C5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6D5A3A-2517-4FBC-85C4-9F2A25AB8A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6D5A3A-2517-4FBC-85C4-9F2A25AB8A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6D5A3A-2517-4FBC-85C4-9F2A25AB8A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6D5A3A-2517-4FBC-85C4-9F2A25AB8A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -275,6 +277,7 @@ Global
 		{01CB3192-A147-4F5B-93B2-1950A716A653} = {601B7607-8582-4122-823A-8FE5CA52DB90}
 		{306199D9-3D39-490D-956A-2BE86C4B290E} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
 		{0FED4607-F3DD-492C-B98F-5309AA92C5A0} = {D971A4AC-14C4-44C6-BDAE-FB794F3F0F4F}
+		{AD6D5A3A-2517-4FBC-85C4-9F2A25AB8A23} = {5C46D93F-03F0-499D-A9E3-42A1DDAB2E13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5047F34A-1FFD-4FDB-9FD4-AD3217E0CD54}
